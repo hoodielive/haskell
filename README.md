@@ -60,7 +60,6 @@ Learn Haskell
 <ex1> 
 nvim hello.hs 
 
-        //
 	string1 = "howdy"
 	string2 = "yes howdy to you too"
 	greeting = string1 ++ " " ++ string2 
@@ -87,7 +86,6 @@ nvim hello.hs
 8. Recursion: 
 	+ a function which 'calls' itself:
 
-         //
 	 -- pow2 n = 2 to the power of n
 	 pow2 n =
 	    if n == 0
@@ -96,7 +94,6 @@ nvim hello.hs
 		
 	+ how would this look in an imperative language like java?: 
 
-        //
 		 int pow2(int n) {
 		    int x = 1;
 		    for (int i = 0; i < n; ++i)
@@ -105,7 +102,6 @@ nvim hello.hs
 		   } 
 
 9.  Recursion is used ALL the time in Haskell, because it does NOT have Loops.. 
-//
 Haskell:
 repeatString str n = 
 	if n == 0 
@@ -113,7 +109,6 @@ repeatString str n =
 	else str ++ (repeatString str (n-1)) // lol  
 
 
-//
 in java it would be:
 int repeatString(String str, int n) {
 	String result = ""; 
@@ -125,7 +120,6 @@ int repeatString(String str, int n) {
 
 	+ Every loop can be re-written as recursion in haskell, because recursion replaces loops
 
-        //
 	For example in Java:
 		int pow2(int n) {
 			int x = 1; 
@@ -134,7 +128,6 @@ int repeatString(String str, int n) {
 			return x;
 		} 
 
-        //		
 	the same in Haskell:
 	        pow2 n = pow2loop n 1 0 
 		pow2loop n x i = 
@@ -144,7 +137,6 @@ int repeatString(String str, int n) {
 
 
 10. Lists 
-        //
  	x = [1,2,3] 
 
 	empty = [] 
@@ -161,11 +153,9 @@ int repeatString(String str, int n) {
 
 	str = "abcde" -- strings in haskell are really just lists of characters 
 		shorthand for +: 
-        //
 	str' = 'a' : 'b' : 'c' : 'd' : 'e' : [] 
 
 12. Concatenating Lists 
-        //
 	[1,2,3] ++ [4,5]
 	results + [1,2,3,4,5]
 
@@ -174,7 +164,6 @@ int repeatString(String str, int n) {
 	
 
 	Note: Lists must be homogeneous 
-        //
 		error = [1,"hello",2] // there are no list of object 
 
 
@@ -191,7 +180,6 @@ int repeatString(String str, int n) {
 	null [1,2] -- tests false
 
 12. List Functions 
-        //
 	double nums = 
 	if null nums
 	then [] 
@@ -200,7 +188,6 @@ int repeatString(String str, int n) {
 
 	another slightly more difficult program:
 	
-        //
 	removeOdd nums =
 	   if null nums
 	   then [] 
@@ -211,7 +198,6 @@ int repeatString(String str, int n) {
 
 
 13. Tuples 
-        //
 	x = (1, "hello") -- can take many different types 
 	y = ("pi", 3.14159, [1,2,3], "four")
 
