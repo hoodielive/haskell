@@ -12,4 +12,4 @@ doubleSmallNumberAddOne x = (if x > 100 then x else x * 2) + 1
 
 osa'meji = "This is odu ifa and very powerful it is!"
 
-let lostNumbers = [4,8,15,16,23,42]
+let lostNumbers = [4, 8, 15, 16, 23, 42 ]
